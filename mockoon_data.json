@@ -1,0 +1,96 @@
+{
+  "uuid": "f93ba801-0358-4d2e-b992-5f8e7c734502",
+  "lastMigration": 29,
+  "name": "Dosomething",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "99b00a2c-1196-4d69-bf30-1f68def8fdea",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "getaddress",
+      "responses": [
+        {
+          "uuid": "d86e7400-a4bb-4541-829f-6e4470ac819e",
+          "body": "Mockoon: This is a response from Mockoon\n\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/text"
+            },
+            {
+              "key": "X-Mockoon-Header",
+              "value": "Resonse is from Mockoon"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "orderId",
+              "value": "^real",
+              "invert": true,
+              "operator": "regex"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": "FALLBACK"
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "99b00a2c-1196-4d69-bf30-1f68def8fdea"
+    }
+  ],
+  "proxyMode": true,
+  "proxyHost": "http://localhost:8002",
+  "proxyRemovePrefix": true,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

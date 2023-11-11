@@ -1,0 +1,9 @@
+version: '3'
+services:
+  node-container:
+    image: node:18
+    volumes:
+     - .:/workspace
+    ports: 
+    - 8002:8002
+    
